@@ -1,6 +1,18 @@
 
 
 
+def view():
+    pass
+
+def add():
+    name = input('Account Name: ')
+    pwd = input("Password: ")
+
+    with open('passwords.txt', 'a') as f:
+        f.write(name + "|" + pwd + "\n")
+
+
+
 def passcode_list():
     
     #pwd = input("Create a master password by typing here:  ")
@@ -11,9 +23,9 @@ def passcode_list():
         if mode == "q":
             break
         if mode == "view":
-            pass
+            view()
         elif mode == "add":
-            pass
+            add()
         else: 
             print("Invalid mode.")
             continue

@@ -1,5 +1,12 @@
+from cryptography.fernet import Fernet
 
+'''
+def writing_key():
+    kee = Fernet.generate_key()
+    with open("secret.tool", "wb") as one_time_file:
+        one_time_file.write(kee)
 
+writing_key()'''
 
 def view():
     with open('passwords.txt', 'r') as f:

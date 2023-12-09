@@ -6,12 +6,12 @@ def writing_key():
     with open("secret.tool", "wb") as one_time_file:
         one_time_file.write(kee)
 
-writing_key()'''
+writing_key()'''      #1:39:40 shows documentation, and description
 
 def view():
     with open('passwords.txt', 'r') as f:
-        for line in f.readlines():
-            data = line.rstrip()
+        for lines in f.readlines():
+            data = lines.rstrip()
             user, passw = data.split("|")
             print("User:", user, "| Password:", passw)
 

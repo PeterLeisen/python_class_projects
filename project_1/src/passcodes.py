@@ -1,16 +1,12 @@
 from cryptography.fernet import Fernet
 
-# One Time Operation that Writes the Key
-''' 
-def writing_key():
-    kee = Fernet.generate_key()
-    with open("secret.key", "wb") as one_time_file:
-        one_time_file.write(kee)
+from Key_Maker import Key_Generator
 
-writing_key()  '''   #1:39:40 shows documentation, and description
+    # One Time Operation that Writes the Key
+#Key_Generator.writing_key()
 
 def Loading_Key():
-    filee = open("secret.key", "rb")
+    filee = open("secretss.key", "rb")
     keyy = filee.read()
     return keyy
 

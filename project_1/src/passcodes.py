@@ -1,12 +1,16 @@
 from cryptography.fernet import Fernet
 
-'''
+# One Time Operation that Writes the Key
+''' 
 def writing_key():
     kee = Fernet.generate_key()
-    with open("secret.tool", "wb") as one_time_file:
+    with open("secret.key", "wb") as one_time_file:
         one_time_file.write(kee)
 
-writing_key()'''      #1:39:40 shows documentation, and description
+writing_key()  '''   #1:39:40 shows documentation, and description
+
+def Loading_Key():
+    return open(secret.tool)
 
 def View_Pwrds():
     with open('pwords.txt', 'r') as f:

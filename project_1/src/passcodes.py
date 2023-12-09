@@ -1,6 +1,7 @@
 from cryptography.fernet import Fernet
 
 from Key_Maker import Key_Generator
+from Operations import ViewAdd
 
     # One Time Operation that Writes the Key
 #Key_Generator.writing_key()
@@ -38,8 +39,10 @@ def PassWrd_List():
 
         if mode == "view":
             View_Pwrds()
+            #ViewAdd.View_Pwrds()
         elif mode == "add":
             AddPwrd()
+            #ViewAdd.AddPwrd()
         else: 
             print("Invalid entry.")
             continue

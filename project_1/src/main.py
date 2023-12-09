@@ -5,7 +5,7 @@ import passcodes
 #import Testing
 
 def main():
-    passcodes.passcode_list()
+    passcodes.PassWrd_List()
     #Testing.pwd
 
 

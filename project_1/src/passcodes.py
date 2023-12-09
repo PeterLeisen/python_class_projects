@@ -8,37 +8,37 @@ def writing_key():
 
 writing_key()'''      #1:39:40 shows documentation, and description
 
-def view():
-    with open('passwords.txt', 'r') as f:
+def View_Pwrds():
+    with open('pwords.txt', 'r') as f:
         for lines in f.readlines():
-            data = lines.rstrip()
-            user, passw = data.split("|")
-            print("User:", user, "| Password:", passw)
+            inform = lines.rstrip()
+            userName, pword = inform.split("|")
+            print("User:", userName, "| Password:", pword)
 
-def add():
-    name = input('Account Name: ')
-    pwd = input("Password: ")
+def AddPwrd():
+    AccountName = input('Account Name: ')
+    PassWrd = input("Password: ")
 
-    with open('passwords.txt', 'a') as f:
-        f.write(name + "|" + pwd + "\n")
+    with open('pwords.txt', 'a') as f:
+        f.write(AccountName + "|" + PassWrd + "\n")
 
 
 
-def passcode_list():
+def PassWrd_List():
     
     #pwd = input("Create a master password by typing here:  ")
 
     while True:
-        mode = input("Please choose weither to view existing passwords or add a new password: (view, add), press q to quit? ").lower() 
+        mode = input("Please decide to either view your existing passwords or add a new password: (view, add), press q to quit? ").lower() 
         if mode == "q":
             break
 
         if mode == "view":
-            view()
+            View_Pwrds()
         elif mode == "add":
-            add()
+            AddPwrd()
         else: 
-            print("Invalid mode.")
+            print("Invalid entry.")
             continue
             
 

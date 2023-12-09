@@ -10,23 +10,26 @@ def writing_key():
 writing_key()  '''   #1:39:40 shows documentation, and description
 
 def Loading_Key():
-    return open(secret.tool)
+    filee = open("secret.key", "rb")
+    keyy = filee.read()
+    return keyy
+
+keey = Loading_Key()
+fern = Fernet(keey)
 
 def View_Pwrds():
     with open('pwords.txt', 'r') as f:
         for lines in f.readlines():
             inform = lines.rstrip()
             userName, pword = inform.split("|")
-            print("User:", userName, "| Password:", pword)
+            print("User:", userName, "| Password:", fern.decrypt(pword.encode()).decode())
 
 def AddPwrd():
     AccountName = input('Account Name: ')
     PassWrd = input("Password: ")
 
     with open('pwords.txt', 'a') as f:
-        f.write(AccountName + "|" + PassWrd + "\n")
-
-
+        f.write(AccountName + "|" + fern.encrypt(PassWrd.encode()).decode() + "\n")
 
 def PassWrd_List():
     

@@ -1,6 +1,6 @@
 from cryptography.fernet import Fernet
 
-from Key_Maker import Key_Generator
+from key_generator import Key_Generator
 
     # One Time Operation that Writes the Key
 #Key_Generator.writing_key()

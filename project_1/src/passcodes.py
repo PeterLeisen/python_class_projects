@@ -5,22 +5,22 @@ from key_generator import Key_Generator
     # One Time Operation that Writes the Key
 #Key_Generator.writing_key()
 
-def Loading_Key():
+def loading_key():
     filee = open("secretss.key", "rb")
     keyy = filee.read()
     return keyy
 
-keey = Loading_Key()
+keey = loading_key()
 fern = Fernet(keey)
 
-def View_Pwrds():
+def view_pwrds():
     with open('pwords.txt', 'r') as f:
         for lines in f.readlines():
             inform = lines.rstrip()
             userName, pword = inform.split("|")
             print("User:", userName, "| Password:", fern.decrypt(pword.encode()).decode())
 
-def AddPwrd():
+def add_pwrd():
     AccountName = input('Account Name: ')
     PassWrd = input("Password: ")
 
@@ -35,10 +35,10 @@ def PassWrd_List():
             break
 
         if mode == "view":
-            View_Pwrds()
+            view_pwrds()
 
         elif mode == "add":
-            AddPwrd()
+            add_pwrd()
 
         else: 
             print("Invalid entry.")

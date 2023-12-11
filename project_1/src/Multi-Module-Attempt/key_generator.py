@@ -8,5 +8,3 @@ class Key_Generator:
         with open("secretss.key", "wb") as one_time_file:
             one_time_file.write(kee)
 
-
-    #writing_key()   #1:39:40 shows documentation, and description

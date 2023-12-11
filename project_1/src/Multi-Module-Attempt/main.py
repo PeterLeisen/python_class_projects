@@ -2,11 +2,8 @@
 import passcodes
 
 
-#import Testing
-
 def main():
-    passcodes.PassWrd_List()
-    #Testing.pwd
+    passcodes.pass_wrd_list()
 
 
 if __name__ == "__main__" :

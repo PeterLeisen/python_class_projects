@@ -1,6 +1,6 @@
 from cryptography.fernet import Fernet
 
-from Key_Maker import Key_Generator
+from key_generator import Key_Generator
 #from Operations import ViewAdd
 
     # One Time Operation that Writes the Key
@@ -18,8 +18,8 @@ def View_Pwrds():
     with open('pwords.txt', 'r') as f:
         for lines in f.readlines():
             inform = lines.rstrip()
-            userName, pword = inform.split("|")
-            print("User:", userName, "| Password:", fern.decrypt(pword.encode()).decode())
+            user_name, pword = inform.split("|")
+            print("User:", user_name, "| Password:", fern.decrypt(pword.encode()).decode())
 
 def AddPwrd():
     AccountName = input('Account Name: ')
@@ -28,7 +28,7 @@ def AddPwrd():
     with open('pwords.txt', 'a') as f:
         f.write(AccountName + "|" + fern.encrypt(PassWrd.encode()).decode() + "\n")
 
-def PassWrd_List():
+def pass_wrd_list():
     
     #pwd = input("Create a master password by typing here:  ")
 

@@ -3,7 +3,7 @@ import passcodes
 
 
 def main():
-    passcodes.PassWrd_List()
+    passcodes.pass_wrd_list()
 
 
 if __name__ == "__main__" :

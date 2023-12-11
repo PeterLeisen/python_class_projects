@@ -27,7 +27,7 @@ def add_pwrd():
     with open('pwords.txt', 'a') as f:
         f.write(AccountName + "|" + fern.encrypt(PassWrd.encode()).decode() + "\n")
 
-def PassWrd_List():
+def pass_wrd_list():
 
     while True:
         mode = input("Please decide to either view your existing passwords or add a new password: (view, add), press q to quit? ").lower() 

@@ -1,5 +1,4 @@
 from cryptography.fernet import Fernet
-
 from key_generator import Key_Generator
 
     # One Time Operation that Writes the Key
@@ -33,13 +32,10 @@ def pass_wrd_list():
         mode = input("Please decide to either view your existing passwords or add a new password: (view, add), press q to quit? ").lower() 
         if mode == "q":
             break
-
         if mode == "view":
             view_pwrds()
-
         elif mode == "add":
             add_pwrd()
-
         else: 
             print("Invalid entry.")
             continue

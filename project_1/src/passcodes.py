@@ -16,8 +16,8 @@ def view_pwrds():
     with open('pwords.txt', 'r') as f:
         for lines in f.readlines():
             inform = lines.rstrip()
-            userName, pword = inform.split("|")
-            print("User:", userName, "| Password:", fern.decrypt(pword.encode()).decode())
+            user_name, pword = inform.split("|")
+            print("User:", user_name, "| Password:", fern.decrypt(pword.encode()).decode())
 
 def add_pwrd():
     account_name = input('Account Name: ')

@@ -21,11 +21,11 @@ def view_pwrds():
             print("User:", userName, "| Password:", fern.decrypt(pword.encode()).decode())
 
 def add_pwrd():
-    AccountName = input('Account Name: ')
-    PassWrd = input("Password: ")
+    account_name = input('Account Name: ')
+    pass_wrd = input("Password: ")
 
     with open('pwords.txt', 'a') as f:
-        f.write(AccountName + "|" + fern.encrypt(PassWrd.encode()).decode() + "\n")
+        f.write(account_name + "|" + fern.encrypt(pass_wrd.encode()).decode() + "\n")
 
 def pass_wrd_list():
 

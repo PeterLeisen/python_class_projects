@@ -1,6 +1,6 @@
-class key_loading:
+class Key_Loading:
     
-    def Loading_Key():
+    def loading_key():
         filee = open("secretss.key", "rb")
         keyy = filee.read()
         return keyy
